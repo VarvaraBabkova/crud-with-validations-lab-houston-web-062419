@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1><%= @song.title%></h1> 
+	<h2><%= @song.artist_name %></h2>
+
+	<p><%= "Released" if @song.released %></p>
+	<p><%= "Not Released" if !@song.released %></p>
+
+	<p><%= @song.release_year %></p>
+
+	<p><%= @song.genre %></p>
+
+	<br><br>
+	<%=button_to "Edit the song",  {action:"edit"}, {method:"get"} %>
+
+	<%=button_to "Back to the list",  {action:"index"}, {method:"get"} %>
+
+</body>
+</html>

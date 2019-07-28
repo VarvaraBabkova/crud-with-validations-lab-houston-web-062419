@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<%= button_to "New song", {action:"new"}, {method: "get"} %>
+	<br><br>
+	<table class="table table-striped">
+		<tbody>	
+		<% @songs.each do |s|%>
+			<tr>
+				<td><%= link_to s.artist_name + " " + s.title, song_path(s) %> </td>
+			</tr>
+		<%end%>
+		</tbody>	
+	</table>
+</body>
+</html>
+
